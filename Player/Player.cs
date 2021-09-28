@@ -31,8 +31,19 @@ namespace HallAdPlayer
             currentFile = file.FileName;
             if (_outputDevice.PlaybackState == PlaybackState.Stopped)
             { 
-                _outputDevice.Init(new AudioFileReader(file.FileName));
-                _outputDevice.Play();
+                try 
+                { 
+                    _outputDevice.Init(new AudioFileReader(file.FileName));
+                    _outputDevice.Play();
+                } 
+                catch (Exception ex) 
+                { 
+                    Console.WriteLine($"\n\r---- ERROR ---------------------");
+                    Console.WriteLine($"Can't play {file.FileName}. \n\rError: {ex.Message}");
+                    Console.WriteLine($"-------------------------------- \n\r");
+                    this.Stopped?.Invoke(this, EventArgs.Empty);
+                }
+                
             }
         }
 
