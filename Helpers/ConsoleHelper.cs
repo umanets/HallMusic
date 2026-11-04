@@ -1,4 +1,4 @@
-﻿using HallAdPlayer.Public;
+using HallAdPlayer.Public;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace HallAdPlayer
     public static class ConsoleHelper
     {
         /// <summary>
-        /// This method shows information about command user can type manully to get immediate feedback from app
+        /// This method shows information about command user can type manually to get immediate feedback from app
         /// </summary>
         public static void ShowInfo() 
         { 
@@ -20,11 +20,11 @@ namespace HallAdPlayer
             Console.WriteLine("// ============================================================ //");
             Console.WriteLine("");
 
-            Console.WriteLine("Avaiable commands:");
+            Console.WriteLine("Available commands:");
             Console.WriteLine("    stop   - stops current composition and start new one.");
-            Console.WriteLine("    pause  - pause current composation.");
-            Console.WriteLine("    resume - resume current composation.");
-            Console.WriteLine("    adplay - start next block od adv.");
+            Console.WriteLine("    pause  - pause current composition.");
+            Console.WriteLine("    resume - resume current composition.");
+            Console.WriteLine("    adplay - start next block of ads.");
             Console.WriteLine("    exit   - stops player and exit:");
 
             Console.WriteLine("");
